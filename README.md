@@ -2,7 +2,7 @@
 
 **AnalytixLabs integrated case study · Jun 2023 · SQL Server (T-SQL) · Excel pivots & Pareto · Power BI**
 
-This was the Term 1 capstone of my 2023 career switch. One retail dataset (transactions for a multi-store chain, joined to customer demographics) runs through all three tools:
+This was the Term 1 capstone of my 2023 full-time data-analytics studies. One retail dataset (transactions for a multi-store chain, joined to customer demographics) runs through all three tools:
 
 1. **SQL:** clean the raw tables, join them, answer 15 business questions and build a Customer 360 table.
 2. **Excel:** take the sampled data (**67,593 transactions**) and answer 10 more questions with formulas, pivot tables and **Pareto analysis**.
