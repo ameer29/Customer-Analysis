@@ -68,4 +68,4 @@ Every page has the same slicer panel (year, month, week, location, store, age, g
 *Dataset provided by AnalytixLabs for the case study. The Excel workbook includes the sample data because the formulas and pivots depend on it.*
 
 ---
-Part of my portfolio · **[ameer29.github.io](https://ameer29.github.io)** · more 2023 work: [Python case studies](https://github.com/ameer29/analytixlabs-python-case-studies) · [Supply-chain Python case](https://github.com/ameer29/Projects)
+Part of my portfolio · **[ameer29.github.io](https://ameer29.github.io)** · more 2023 work: [Python case studies](https://github.com/ameer29/analytixlabs-python-case-studies) · [Supply-chain Python case](https://github.com/ameer29/supply-chain-inventory-analysis)
