@@ -55,6 +55,20 @@ This was the Term 1 capstone of my 2023 career switch. One retail dataset (trans
 
 Every page has the same slicer panel (year, month, week, location, store, age, gender, customer segment), plus page-navigation buttons.
 
+## 4 · Bonus: SQL case study on retail transactions (Nov 2023)
+[`sql/retail_transactions_case_study.sql`](sql/retail_transactions_case_study.sql): 20 T-SQL questions on a customers × transactions × product-hierarchy schema.
+- **Data preparation:** row counts per table, return transactions, date conversion (`CONVERT(date, …, 105)`) and the date range with `DATEDIFF`.
+- **Analysis:**
+  - top store channel
+  - gender split and the busiest city
+  - revenue from Books + Electronics and from Flagship-store Electronics + Clothing (joined on category **and** sub-category)
+  - customers with more than 10 transactions
+  - male Electronics revenue by sub-category
+  - top-5 sub-categories by share of sales vs share of returns
+  - 25–35-year-olds active in the last 30 days
+  - most returns in the last 90 days
+  - categories above average revenue
+
 ---
 
 ## What I'd fix now (2026 review)
@@ -63,6 +77,10 @@ Every page has the same slicer panel (year, month, week, location, store, age, g
 - **"Segment contributing maximum sales" (Q13)** used age bands; the question meant `Cust_seg`.
 - **Customer_360** is only a schema. The `INSERT … SELECT` with `GROUP BY CustID`, `RANK()` and `NTILE(10)` is missing, and it's the part I'd write first today.
 - **Excel Q5** was asked as "revenue from the top 50% of customers" but lists only the top 5. A cumulative-share column would answer it directly. In Q8 the column headers are swapped (revenue vs customer count).
+- **Bonus SQL:**
+  - Q11 should total the revenue from the last 30 days only. My query returns each customer's lifetime revenue, row by row, and its strict `25 < age < 35` drops the boundary ages.
+  - Q12 ranks returns by quantity rather than value.
+  - Q15 filters sub-category codes against a list of *category* codes.
 - **Power BI:** "Distinct Customer" uses a count of rows, not `DISTINCTCOUNT`. I'd also add written insights to each page instead of charts alone.
 
 *Dataset provided by AnalytixLabs for the case study. The Excel workbook includes the sample data because the formulas and pivots depend on it.*
